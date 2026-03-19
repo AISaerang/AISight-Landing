@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AISight</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 60px;
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+}
+
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #555;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: linear-gradient(135deg, #111, #1f3b73);
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 { font-size: 72px; }
+.hero p { color: #ddd; font-size: 24px; }
+
+.hero-image img {
+  width: 450px;
+  height: 250px;
+  border-radius: 16px;
+}
+
+.cta {
+  margin-top: 2px;
+  padding: 10px 30px;
+  background: white;
+  color: black;
+  border-radius: 60px;
+  display: inline-block;
+}
+
+/* SECTION */
+.section {
+  padding: 60px;
+}
+
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.dark p, 
+.dark li {
+  color: #cbd5f5;
+}
+
+.features {
+  flex: 1;
+  background: #0f172a;
+  color: white;
+}
+
+.section h2 {
+  font-size: 36px;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2px;
+}
+
+/* CARD */
+.card {
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+}
+
+/* VALUE */
+.highlight {
+  background: #f1f5f9;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+/* BENEFITS */
+.benefit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.benefit-text {
+  flex: 1;
+}
+
+.benefit {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.benefit-image img {
+  width: 500px;
+  border-radius: 20px;
+  
+}
+
+.divider {
+  height: 60px; /* 🔥 spacing yang konsisten */
+}
+
+/* PRICING */
+.pricing {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  flex: 1;
+  padding: 30px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbdbdc, #b5d5f8);
+  color: rgb(0, 27, 86);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+.calculator select {
+  background: white;
+  color: #00133b;
+  font-size: 15px;
+}
+
+.calculator button {
+  margin-top: 15px;
+  background: #000000;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.calculator button:hover {
+  transform: scale(1.03);
+}
+
+.result {
+  margin-top: 25px;
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.result b {
+  color: #00070e; /* biru highlight */
+}
+
+.features {
+  flex: 1;
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+/* FOUNDER */
+.founder {
+  display: flex;
+  gap: 30px;
+}
+
+.founder img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+/* NOTE */
+.note {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <img id="logo" height="30">
+  <div>
+    <a href="#program">Program</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>AISight</h1>
+    <p>
+      Transform from beginner to data professional 
+      with real-world BI training.
+    </p>
+    <a href="https://forms.gle/yoZqPRDpCCwvkqoq5" target="_blank" class="cta">Join Batch</a>
+  </div>
+
+  <div class="hero-image">
+    <img id="heroImg">
+  </div>
+</div>
+
+<!-- VALUE -->
+<div class="section">
+  <h2>Better Value Than Market Training</h2>
+  <div class="grid-2">
+    <div>
+      <p>
+        The Power BI certification (PL-300™) costs around <b>USD 165 (~IDR 2.8M)</b> for exam only 
+        (<a href="https://learn.microsoft.com/en-us/certifications/power-bi-data-analyst-associate/" target="_blank">learn.microsoft.com</a>).
+      </p>
+      <p>
+        External workshops in Indonesia range from <b>IDR 6–7M</b> for just 1 day training 
+        (<a href="https://nexacu.com/microsoft-power-bi-training-courses/power-bi-beginner/" target="_blank">nexacu.com</a>).
+      </p>
+      <p>
+        AISight provides <b>16–24 hours</b> + real projects + mentoring at a fraction of the cost.
+      </p>
+    </div>
+
+    <div class="highlight">
+      <b>Why AISight?</b>
+      <ul>
+        <li>Longer learning duration</li>
+        <li>Real-world portfolio</li>
+        <li>Business-driven approach</li>
+        <li>Direct mentoring</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<div class="section dark" id="program">
+  <h2>Program Structure</h2>
+  <div class="grid-2">
+    <div class="card">Excel Foundation</div>
+    <div class="card">Power BI Professional</div>
+    <div class="card">Web Portfolio</div>
+    <div class="card">Business Thinking</div>
+  </div>
+
+    <!-- DIVIDER SPACE -->
+  <div class="divider"></div>
+
+  <div class="benefit-wrapper">
+    <div class="benefit-image">
+      <img id="benefitImg">
+    </div>
+
+     <div class="benefit-text">
+          <h2>What You Get</h2>
+      <div class="benefit">✔ Verified Digital Certificate & LinkedIn Badge</div>
+      <div class="benefit">✔ Power BI Pro Access</div>
+      <div class="benefit">✔ Exclusive Champion Program & Rewards</div>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" id="pricing">
+  <h2>Pricing Simulation</h2>
+
+  <div class="pricing">
+    
+    <div class="calculator">
+      <select id="package">
+        <option value="Specialize">Specialize</option>
+        <option value="Regular">Regular</option>
+      </select>
+
+      <select id="scenario">
+        <option value="1">1 Person</option>
+        <option value="3">3 People</option>
+        <option value="5">5 People</option>
+        <option value="10">10 People</option>
+      </select>
+
+      <button onclick="calculate()">Calculate</button>
+
+      <div id="result"></div>
+</div>
+    <div class="features">
+              <div class="note">
+        <b style="color:#eeff9b;">
+        Founding Batch (Batch 1–2) Special Price:</b><br>
+        This pricing is limited and will not be available in future batches.
+      </div> <br>
+      <b>Included:</b>
+      <ul>
+        <li>16–24 hours training</li>
+        <li>Hands-on project</li>
+        <li>Mentoring</li>
+        <li>Portfolio</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section dark" id="about">
+  <h2>About the Founder</h2>
+
+  <div class="founder">
+    <img id="founderImg">
+    <div>
+      <h3>Alvandi Immanuille Saerang</h3>
+      <p>Business Intelligence Consultant at PT Astra International Tbk</p>
+      <p>
+        Specializes in data analytics by transforming data into actionable insights. Driven by curiosity and creativity, he helps organizations optimize their analytical processes through a Lean approach, improving efficiency in decision-making. Through AISight, he is committed to helping individuals understand data in a practical, relevant, and impactful way.
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/aisaerang" target="_blank">View LinkedIn Profile</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  data@aisaerang.com
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("logo").src = "assets/logo/AISight BW.png";
+  document.getElementById("founderImg").src = "assets/images/AISaerang.jpg";
+
+  // FIXED (huruf kecil)
+  document.getElementById("benefitImg").src = "assets/images/benefit.png";
+
+  // TAMBAHAN HERO IMAGE
+  document.getElementById("heroImg").src = "assets/images/training.jpg";
+});
+
+const rate = 95000;
+
+const durations = {
+  Specialize: 16,
+  Regular: 24
+};
+
+function calculate() {
+  const pkg = document.getElementById("package").value;
+  const people = parseInt(document.getElementById("scenario").value);
+
+  let discount = 0;
+  if (people == 3) discount = 0.1;
+  if (people == 5) discount = 0.2;
+  if (people == 10) discount = 0.25;
+
+  let base = durations[pkg] * rate;
+
+  if (pkg === "Specialize" && people === 1) {
+    base = 1520000;
+  }
+
+  const final = base * (1 - discount);
+  const total = final * people;
+
+  // 🔥 PROGRAM LOGIC
+  let programList = `
+    <li>Power BI Professional</li>
+    <li>Web Portfolio</li>
+    <li>Business Thinking</li>
+  `;
+
+  if (pkg === "Regular") {
+    programList = `
+      <li>Excel Foundation</li>
+      <li>Power BI Professional</li>
+      <li>Web Portfolio</li>
+      <li>Business Thinking</li>
+    `;
+  }
+
+  document.getElementById("result").innerHTML = `
+    <div class="result">
+      <b>Total Duration:</b> ${durations[pkg]} hours <br>
+      <b>Cost Before Discount:</b> Rp ${base.toLocaleString()} <br>
+      <b>Discount:</b> ${discount*100}% <br>
+      <b style="font-size:18px;">Final Price per Person:</b> Rp ${final.toLocaleString()} <br>
+
+      <hr style="margin:15px 0; border:0.5px solid rgba(255,255,255,0.2);">
+
+      <b>Program Included:</b>
+      <ul style="margin-top:10px; padding-left:20px;">
+        ${programList}
+      </ul>
+      <b>You save more by choosing Regular package</b>
+    </div>
+    
+  `;
+}
+</script>
+
+</body>
+</html> 
