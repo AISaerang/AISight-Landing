@@ -68,6 +68,7 @@ body {
   color: black;
   border-radius: 60px;
   display: inline-block;
+  font-size: 16px;
 }
 
 /* SECTION */
@@ -223,14 +224,109 @@ body {
   background: #111;
   color: #aaa;
 }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  .nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 40px 20px;
+  }
+
+  /* GRID jadi 1 kolom */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* BENEFIT */
+  .benefit-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefit-image img {
+    width: 100%;
+  }
+
+  /* PRICING */
+  .pricing {
+    flex-direction: column;
+  }
+
+  .calculator {
+    width: 100%;
+  }
+
+  .features {
+    width: 100%;
+  }
+
+  /* FOUNDER */
+  .founder {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder img {
+    width: 160px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+}
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
-<div class="nav">
-  <img id="logo" height="30">
+ <div class="nav">
+  <a href="https://aisight.aisaerang.com">
+    <img id="logo" height="30" style="cursor:pointer;">
+  </a>
+
   <div>
     <a href="#program">Program</a>
     <a href="#pricing">Pricing</a>
